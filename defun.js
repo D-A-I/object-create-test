@@ -1,5 +1,5 @@
 /* ファクトリメソッド用のオブジェクト
- * - Animal - */
+ * ++ Animal ++ */
 const Animal = {
     create(type) {
         let animal = Object.create(Animal.prototype);
@@ -16,13 +16,13 @@ const Animal = {
     prototype: {}
 };
 /* ファクトリメソッド用のオブジェクト
- * - Cat - */
+ * ++ Cat ++ */
 const Cat = {
     create(name, bread) {
         let cat = Object.create(Cat.prototype);
-        // Animalのパブリックプロパティ付与
+        // Animalのパブリックメンバを付与
         Object.assign(cat, Animal.create('Cat'));
-        // メンバ変数
+        // Catのメンバ変数
         cat.name = name;
         cat.bread = bread;
         return cat;
@@ -32,7 +32,7 @@ const Cat = {
     },
     prototype: {
         sing() {
-            console.log('nya nya nya');
+            console.log('nya nya nya !!');
         },
         introduce() {
             console.log(`My name is '${this.name}' The '${this.bread}'.`);
