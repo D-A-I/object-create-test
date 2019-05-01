@@ -7,7 +7,7 @@ const Animal = {
         return animal;
     },
     isAnimal(obj, type) {
-        // objのプロトタイプチェーン上にAnimalが存在するか
+        // objのプロトタイプチェーン上にAnimal.prototype（{}）が存在するか
         if (!Animal.prototype.isPrototypeOf(obj)) {
             return false;
         }
